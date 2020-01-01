@@ -11,7 +11,7 @@ AFRAME.registerComponent('change-garland-lights', {
     init: function () {
         this.last = 0;
         this.icospheres = undefined;
-
+        this.colors = [new THREE.Color(0xE72134), new THREE.Color(0x2F38E7), new THREE.Color(0x00E70C)];
         this.el.addEventListener('model-loaded', () => {
             // Grab the mesh / scene.
             const obj = this.el.getObject3D('mesh');
@@ -21,13 +21,11 @@ AFRAME.registerComponent('change-garland-lights', {
 
     },
     tick: function (time) {
-        let colors = [new THREE.Color(0xE72134), new THREE.Color(0x2F38E7), new THREE.Color(0x00E70C)];
-
 
         if (!this.last || time - this.last >= 1000) {
             this.last = time;
             for (let ico of this.icospheres) {
-                ico.material.color = colors[ (Math.floor(Math.random() * 10) % 3) ];
+                ico.material.color = this.colors[ (Math.floor(Math.random() * 10) % 3) ];
             }
 
 
