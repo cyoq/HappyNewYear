@@ -11,8 +11,7 @@ module.exports = {
   mode: 'development',
   devtool: 'inline-source-map',
   entry: {
-    main: path.resolve(__dirname, 'src/js/index.js'),
-    aframe_head: path.resolve(__dirname, 'src/js/aframe_import.js')
+    main_head: path.resolve(__dirname, 'src/js/index.js'),
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
