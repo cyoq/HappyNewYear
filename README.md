@@ -21,7 +21,7 @@ To build the project run:
 ```
 npm run build
 ```
-All built files are placed into the dist folder, excepting index.html which is placed into the root folder.
+All built files are placed into the **dist** folder, excepting **index.html** which is placed into the root folder.
 
 
 ## A big thanks to:
